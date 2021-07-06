@@ -1,9 +1,12 @@
-# Dries's Dotfiles
+<p align="center"><img src="art/banner-2x.png"></p>
 
-This repository serves as my way to help me setup and maintain my Mac. It takes the effort out of installing everything manually. Everything needed to install my preferred setup of macOS is detailed in this readme. Feel free to explore, learn and copy parts for your own dotfiles. Enjoy! :smile:
+## Introduction
 
-📖 Read the blog post: https://driesvints.com/blog/getting-started-with-dotfiles  
-📺 Watch the screencast on Laracasts: https://laracasts.com/series/guest-spotlight/episodes/1
+This repository serves as my way to help me setup and maintain my Mac. It takes the effort out of installing everything manually. Everything needed to install my preferred setup of macOS is detailed in this readme. Feel free to explore, learn and copy parts for your own dotfiles. Enjoy!
+
+📖 - [Read the blog post](https://driesvints.com/blog/getting-started-with-dotfiles)  
+📺 - [Watch the screencast on Laracasts](https://laracasts.com/series/guest-spotlight/episodes/1)  
+💡 - [Learn how to build your own dotfiles](https://github.com/driesvints/dotfiles#your-own-dotfiles)
 
 ## A Fresh macOS Setup
 
@@ -28,18 +31,30 @@ After going to our checklist above and making sure you backed everything up, we'
 If you did all of the above you may now follow these install instructions to setup a new Mac.
 
 1. Update macOS to the latest version with the App Store
-2. Install Xcode from the App Store, open it and accept the license agreement
-3. Install macOS Command Line Tools by running `xcode-select --install`
-4. [Generate a new public and private SSH key](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and add them to Github
-5. Clone this repo to `~/.dotfiles`
-6. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started)
-6. Run `fresh.sh` to start the installation
-7. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
-8. Restart your computer to finalize the process
+2. [Generate a new public and private SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) by running:
+
+   ```zsh
+   curl https://raw.githubusercontent.com/driesvints/dotfiles/HEAD/ssh.sh | sh -s "<your-email-address>"
+   ```
+
+3. Clone this repo to `~/.dotfiles` with:
+
+    ```zsh
+    git clone git@github.com:driesvints/dotfiles.git ~/.dotfiles
+    ```
+
+4. Run the installation with:
+
+    ```zsh
+    ~/.dotfiles/install.sh
+    ```
+
+5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
+6. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
 
-> Note: you can use a different location than `~/.dotfiles` if you want. Just make sure you also update the reference in the [`.zshrc`](./.zshrc) file.
+> 💡 You can use a different location than `~/.dotfiles` if you want. Make sure you also update the reference in the [`.zshrc`](./.zshrc#L2) file.
 
 ## Your Own Dotfiles
 
@@ -66,6 +81,6 @@ Enjoy your own Dotfiles!
 
 ## Thanks To...
 
-I first got the idea for starting this project by visiting the [Github does dotfiles](https://dotfiles.github.io/) project. Both [Zach Holman](https://github.com/holman/dotfiles) and [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) were great sources of inspiration. [Sourabh Bajaj](https://twitter.com/sb2nov/)'s [Mac OS X Setup Guide](http://sourabhbajaj.com/mac-setup/) proved to be invaluable. Thanks to [@subnixr](https://github.com/subnixr) for [his awesome Zsh theme](https://github.com/subnixr/minimal)! And lastly, I'd like to thank [Emma Fabre](https://twitter.com/anahkiasen) for [her excellent presentation on Homebrew](https://speakerdeck.com/anahkiasen/a-storm-homebrewin) which made me migrate a lot to a [`Brewfile`](./Brewfile) and [Mackup](https://github.com/lra/mackup).
+I first got the idea for starting this project by visiting the [GitHub does dotfiles](https://dotfiles.github.io/) project. Both [Zach Holman](https://github.com/holman/dotfiles) and [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) were great sources of inspiration. [Sourabh Bajaj](https://twitter.com/sb2nov/)'s [Mac OS X Setup Guide](http://sourabhbajaj.com/mac-setup/) proved to be invaluable. Thanks to [@subnixr](https://github.com/subnixr) for [his awesome Zsh theme](https://github.com/subnixr/minimal)! And lastly, I'd like to thank [Emma Fabre](https://twitter.com/anahkiasen) for [her excellent presentation on Homebrew](https://speakerdeck.com/anahkiasen/a-storm-homebrewin) which made me migrate a lot to a [`Brewfile`](./Brewfile) and [Mackup](https://github.com/lra/mackup).
 
-In general, I'd like to thank every single one who open-sources their dotfiles for their effort to contribute something to the open-source community. Your work means the world! :earth_africa: :heart:
+In general, I'd like to thank every single one who open-sources their dotfiles for their effort to contribute something to the open-source community.

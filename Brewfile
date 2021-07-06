@@ -2,6 +2,7 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'nicoverbruggen/homebrew-cask'
 
 # Binaries
 brew 'awscli'
@@ -47,7 +48,6 @@ cask 'zoom'
 # Quicklook
 cask 'qlmarkdown'
 cask 'quicklook-json'
-cask 'quicklook-csv'
 
 # Mac App Store
 mas 'Keynote', id: 409183694
