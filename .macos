@@ -25,7 +25,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "Dimitri's-MacBook-Pro"
 sudo scutil --set HostName "Dimitri's-MacBook-Pro"
-sudo scutil --set LocalHostName "Dimitri's-MacBook-Pro"
+sudo scutil --set LocalHostName "Dimitris-MacBook-Pro"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Dimitri's-MacBook-Pro"
 
 # Disable the sound effects on boot
@@ -410,7 +410,7 @@ defaults write com.apple.dock mru-spaces -bool false
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
-defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.4
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
